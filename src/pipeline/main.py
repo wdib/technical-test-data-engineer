@@ -10,7 +10,7 @@ async def run_etl( endpoint, session ):
     await load( transformed_data, endpoint )
 
 async def main():
-    endpoints = [ 'tracks' ]
+    endpoints = [ 'tracks', 'users', 'listen_history' ]
     async with aiohttp.ClientSession() as session:
         await asyncio.gather(
             *( run_etl( endpoint, session ) for endpoint in endpoints )
