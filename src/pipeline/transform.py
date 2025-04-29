@@ -1,2 +1,2 @@
 async def transform( data ):
-    pass
+    return data
