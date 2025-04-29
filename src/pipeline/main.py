@@ -3,6 +3,10 @@ import aiohttp
 from extract import extract
 from transform import transform
 from load import load
+import logging
+
+logger = logging.getLogger( __name__ )
+logger.setLevel( logging.INFO )
 
 async def run_etl( endpoint, session ):
     extracted_data = await extract( endpoint, session )
@@ -17,4 +21,7 @@ async def main():
         )
 
 if __name__ == '__main__':
+    logging.basicConfig( filename='pipeline.log' )
+    logger.info( 'Started ETL pipeline' )
     asyncio.run(main())
+    logger.info( 'Ended ETL pipeline' )
