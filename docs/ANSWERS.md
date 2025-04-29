@@ -48,7 +48,7 @@ pytest
 
 ### Étape 4
 
-Les données extraites des trois endpoints — c’est-à-dire tracks, users et listening history — par le flux de données sont déjà assez structurées et fortement reliées entre elles. Par conséquent, un système SQL s’impose naturellement, contrairement à une solution NoSQL (même si cette dernière peut jouer un rôle intéressant, notamment dans les contextes à fort volume d’écriture).
+Les données extraites des trois endpoints — c’est-à-dire _tracks_, _users_ et _listen\_history_ — par le flux de données sont déjà assez structurées et fortement reliées entre elles. Par conséquent, un système SQL s’impose naturellement, contrairement à une solution NoSQL (même si cette dernière peut jouer un rôle intéressant, notamment dans les contextes à fort volume d’écriture).
 
 Le pipeline effectue également une transformation de type flattening sur l’historique d’écoute afin d’en faciliter le chargement dans une base de données ou l’analyse en aval. Le schéma résultant est le suivant :
 
