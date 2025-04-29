@@ -22,25 +22,25 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Lancer le serveur de l'application:
+4. Pour lancer le serveur de l'application, naviguez vers `src/moovitamix_fastapi/` et exécutez:
 
 ```
-cd src/moovitamix_fastapi/   # par rapport à la racine du projet
 python -m uvicorn main:app
 ```
 
-5. Lancer la flux de données:
+5. Pour lancer la flux de données, naviguez vers `src/pipeline/` et exécutez:
 
 ```
-cd src/pipeline/ # par rapport à la racine du projet
 python main.py
 ```
 
-6. Pour exécuter les test unitaires, déplacez-vous à la racine du projet et exécuter:
+6. Pour exécuter les test unitaires, naviguez à la racine du projet et exécutez [^1]:
 
 ```
 pytest
 ```
+
+[^1]: Selon votre configuration, vous devrez peut-être exécuter la commande suivanate à la place: `python -m pytest`
 
 ## Questions (étapes 4 à 7)
 
