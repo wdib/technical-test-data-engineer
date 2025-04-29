@@ -34,7 +34,8 @@ async def run_etl( endpoint ):
     await load( transformed_data )
 
 async def main():
-    await run_etl( 'tracks' )
+    endpoints = [ 'tracks' ]
+    await asyncio.gather( *( run_etl( endpoint ) for endpoint in endpoints ) )
 
 if __name__ == '__main__':
     asyncio.run(main())
