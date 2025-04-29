@@ -1,4 +1,4 @@
-async def transform( data, endpoint ):
+def transform( data, endpoint ):
     def transform_listen_history( data ):
         flatten_list = []
         for obj in data:
