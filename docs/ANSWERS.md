@@ -48,7 +48,8 @@ pytest
 
 ### Étape 4
 
-_votre réponse ici_
+![Schema](schema.png)
+
 
 ### Étape 5
 
