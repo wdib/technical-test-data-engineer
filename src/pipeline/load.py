@@ -1,10 +1,12 @@
 import aiofiles
 import json
 from pathlib import Path
+from datetime import datetime
 
 async def load( data, filename ):
     data_dir = Path( 'data' )
     data_dir.mkdir( exist_ok=True )
-    file_path = data_dir / f'{filename}.json'
+    timestamp = datetime.now().strftime( '%Y_%m_%d_%H_%M_%S' )
+    file_path = data_dir / f'{timestamp}-{filename}.json'
     async with aiofiles.open( file_path, 'w' ) as f:
         await f.write( json.dumps( data, ensure_ascii=False, indent=4 ) )
