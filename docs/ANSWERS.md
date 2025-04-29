@@ -28,11 +28,13 @@ pip install -r requirements.txt
 python -m uvicorn main:app
 ```
 
-5. Pour lancer la flux de données, naviguez vers `src/pipeline/` et exécutez:
+5. Pour lancer le flux de données, naviguez vers `src/pipeline/` et exécutez:
 
 ```
 python main.py
 ```
+
+Après l’extraction et la transformation, le flux de données enregistre les données localement dans `src/pipeline/data/`.
 
 6. Pour exécuter les test unitaires, naviguez à la racine du projet et exécutez [^1]:
 
